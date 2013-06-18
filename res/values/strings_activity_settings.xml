@@ -1,0 +1,39 @@
+<resources>
+
+    <string name="title_activity_settings">Ustawienia</string>
+
+    <string name="pref_title_cart_number">Numer Karty mBank (16 cyfr)</string>
+    <string name="pref_title_cart_number_value">Podaj numer</string>
+    
+    <string name="pref_title_valid_thrue">Data ważności (VALID THRU)</string>
+    <string name="pref_title_valid_thrue_month">Wybierz miesiąc</string>
+    <string name="pref_title_valid_thrue_year">Wybierz rok</string>
+    
+    <string name="pref_title_cvc2">Kod Karty (3 cyfry)</string>
+    <string name="pref_title_cvc2_value">Podaj CVC2</string>
+    
+    <string-array name="pref_list_month">
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+    
+    <string-array name="pref_list_year">
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+    </string-array>
+
+</resources>

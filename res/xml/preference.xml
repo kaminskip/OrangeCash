@@ -1,0 +1,36 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <PreferenceCategory android:title="@string/pref_title_cart_number" >
+	    <EditTextPreference
+	        android:inputType="number"
+	        android:key="preference_cart_number"
+	        android:maxLines="1"
+	        android:selectAllOnFocus="true"
+	        android:singleLine="true"
+	        android:title="@string/pref_title_cart_number_value" />
+    </PreferenceCategory>
+    
+    <PreferenceCategory android:title="@string/pref_title_valid_thrue" >
+	    <ListPreference 
+		    android:key="preference_valid_thrue_month" 
+		    android:title="@string/pref_title_valid_thrue_month" 
+		    android:entries="@array/pref_list_month" 
+		    android:entryValues="@array/pref_list_month" />
+	    <ListPreference 
+		    android:key="preference_valid_thrue_year" 
+		    android:title="@string/pref_title_valid_thrue_year" 
+		    android:entries="@array/pref_list_year" 
+		    android:entryValues="@array/pref_list_year"/>
+     </PreferenceCategory>
+    
+    <PreferenceCategory android:title="@string/pref_title_cvc2" >
+	    <EditTextPreference
+	        android:inputType="numberPassword"
+	        android:key="preference_ccv2"
+	        android:maxLines="1"
+	        android:selectAllOnFocus="true"
+	        android:singleLine="true"
+	        android:title="@string/pref_title_cvc2_value" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

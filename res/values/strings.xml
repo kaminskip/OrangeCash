@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">OrangeCash</string>
+    <string name="action_settings">Ustawienia</string>
+    
+    <string name="tab_balance">Stan konta</string>
+    <string name="tab_transactions">Transakcje</string>
+    <string name="tab_info">Karta</string>
+    
+</resources>
