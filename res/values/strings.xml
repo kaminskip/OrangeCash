@@ -3,6 +3,7 @@
 
     <string name="app_name">OrangeCash</string>
     <string name="action_settings">Ustawienia</string>
+    <string name="action_update">Aktualizuj</string>
     
     <string name="tab_balance">Stan konta</string>
     <string name="tab_transactions">Transakcje</string>

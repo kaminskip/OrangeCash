@@ -1,7 +1,5 @@
 package eu.netforms.orangecash.view;
 
-import eu.netforms.orangecash.R;
-import eu.netforms.orangecash.data.PropertiesDataSource;
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
 import android.content.Intent;
@@ -11,6 +9,9 @@ import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import eu.netforms.orangecash.R;
+import eu.netforms.orangecash.data.PropertiesDataSource;
+import eu.netforms.orangecash.data.UpdateData;
 
 public class MainActivity extends FragmentActivity implements
 		ActionBar.TabListener {
@@ -24,7 +25,7 @@ public class MainActivity extends FragmentActivity implements
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		propertiesDataSource = new PropertiesDataSource(this);
+		propertiesDataSource = new PropertiesDataSource(getApplicationContext());
 		setContentView(R.layout.main);
 
 		// Set up the action bar.
@@ -91,6 +92,12 @@ public class MainActivity extends FragmentActivity implements
 							+ item.getTitle() + ")");
 			goToSettings();
 			break;
+		case R.id.action_update:
+			Log.v("ACTION",
+					"Select settings " + item.getItemId() + " ("
+							+ item.getTitle() + ")");
+			updateData();
+			break;
 		default:
 			Log.w("ACTION", "No action handled! " + item.getItemId() + " ("
 					+ item.getTitle() + ")");
@@ -98,6 +105,10 @@ public class MainActivity extends FragmentActivity implements
 		return super.onOptionsItemSelected(item);
 	}
 	
+	private void updateData() {
+		new UpdateData(getApplicationContext()).execute("");
+	}
+
 	private void goToSettings(){
 		startActivity(new Intent(this, SettingsActivity.class));
 	}

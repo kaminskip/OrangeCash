@@ -56,11 +56,13 @@ public class BalanceDataSource {
 	}
 	
 	public void updateDB(Update update) {
+		open();
 		clearDb();
 		insertInfo(update.getInfo());
 		for (Trans trans : update.getTransList()) {
 			insertTrans(trans);
 		}
+		close();
 		Log.i(LOG_TAG, "Update complited " + update);
 	}
 
