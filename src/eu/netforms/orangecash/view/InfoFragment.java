@@ -1,13 +1,13 @@
 package eu.netforms.orangecash.view;
 
-import eu.netforms.orangecash.R;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import eu.netforms.orangecash.R;
 
-public class InfoFragment extends PageFragment {
+public class InfoFragment extends Fragment implements PageFragment {
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -15,19 +15,8 @@ public class InfoFragment extends PageFragment {
 		View rootView = inflater.inflate(R.layout.info, container, false);
 		return rootView;
 	}
-	
-	
-	
-	@Override
-	public void onResume() {
-		super.onStart();
-		Log.d("INFO", getPropertiesDataSource().getAccountData().toString());
-	}
 
-
-
-	@Override
-	int getFragmentCodeName() {
+	public int getFragmentCodeName() {
 		return R.string.tab_info;
 	}
 }

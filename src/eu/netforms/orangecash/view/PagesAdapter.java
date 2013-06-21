@@ -3,6 +3,7 @@ package eu.netforms.orangecash.view;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
@@ -18,8 +19,8 @@ public class PagesAdapter extends FragmentPagerAdapter {
 	}
 
 	@Override
-	public PageFragment getItem(int item) {
-		return fragments.get(item);
+	public Fragment getItem(int item) {
+		return (Fragment) fragments.get(item);
 	}
 
 	@Override

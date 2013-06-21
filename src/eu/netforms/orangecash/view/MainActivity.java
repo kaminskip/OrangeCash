@@ -53,7 +53,7 @@ public class MainActivity extends FragmentActivity implements
 
 		// For each of the sections in the app, add a tab to the action bar.
 		for (int i = 0; i < pagesAdapter.getCount(); i++) {
-			int codeName = pagesAdapter.getItem(i).getFragmentCodeName();
+			int codeName = ((PageFragment) pagesAdapter.getItem(i)).getFragmentCodeName();
 			actionBar.addTab(actionBar.newTab()
 					.setText(codeName)
 					.setTabListener(this));
