@@ -1,24 +1,37 @@
 package eu.netforms.orangecash.view;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import eu.netforms.orangecash.R;
+import eu.netforms.orangecash.model.Trans;
 
 public class TransacionFragment extends ListFragment implements PageFragment {
-	
-	static final String[] FRUITS = new String[] { "Apple", "Avocado", "Banana",
-		"Blueberry", "Coconut", "Durian", "Guava", "Kiwifruit",
-		"Jackfruit", "Mango", "Olive", "Pear", "Sugar-apple" };
-	
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		TransactionAdapter transactionAdapter  = new TransactionAdapter(getActivity(), getTrans());
+		setListAdapter(transactionAdapter);
+	}
+
+	private List<Trans> getTrans() {
+		List<Trans> list = new ArrayList<Trans>();
+	    //list.add(new Trans());
+	    //list.add(new Trans());
+	    //list.add(new Trans());
+	    return list;
+	}
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		//setListAdapter(new ArrayAdapter<String>(inflater.getContext(), R.id.testText, FRUITS));
-		return super.onCreateView(inflater, container, savedInstanceState);
+		return inflater.inflate(R.layout.transactions, container, false);
 	}
 
 	public int getFragmentCodeName() {

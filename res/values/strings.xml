@@ -9,4 +9,6 @@
     <string name="tab_transactions">Transakcje</string>
     <string name="tab_info">Karta</string>
     
+    <string name="tab_transactions_no_data">Brak transakcji</string>
+    
 </resources>
