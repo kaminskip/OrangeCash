@@ -32,6 +32,7 @@ public class BalanceDataSource {
 	}
 
 	public List<Trans> getTrans() {
+		open();
 		List<Trans> transList = new ArrayList<Trans>();
 		Cursor cursor = database.query(Trans.TABLE_TRANS,
 				Trans.ALL_COLUMNS, null, null, null, null, null);
@@ -42,6 +43,7 @@ public class BalanceDataSource {
 			cursor.moveToNext();
 		}
 		cursor.close();
+		close();
 		return transList;
 	}
 	

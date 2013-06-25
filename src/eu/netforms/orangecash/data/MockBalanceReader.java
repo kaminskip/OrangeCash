@@ -23,7 +23,7 @@ public class MockBalanceReader implements IBalanceReader {
 	}
 	
 	private void addTrans(Update update){
-		update.addTrans("12.06.2013", "12.06.2013", "", "", "ZAKUP PRZY UŻYCIU KARTY W KRAJU ROLLO-CATERING", "");
+		update.addTrans("12.06.2013", "-2,50PLN", "", "", "ZAKUP PRZY UŻYCIU KARTY W KRAJU ROLLO-CATERING AND LONG  AND LONG  AND LONG  AND LONG  AND LONG  AND LONG  AND LONG  AND LONG  AND LONG  AND LONG", "ROLLO-CATERING");
 		update.addTrans("08.06.2013", "-25,30PLN", "-25,30PLN", "-25,30PLN", "ZAKUP PRZY UŻYCIU KARTY W KRAJU", "Zabka SA ");
 		update.addTrans("08.06.2013", "-9,00PLN", "-9,00PLN", "-9,00PLN", "ZAKUP PRZY UŻYCIU KARTY W KRAJU", "McDonalds");
 		update.addTrans("07.06.2013", "100,00PLN", "100,00PLN", "100,00PLN", "ZASILENIE KARTY", "");

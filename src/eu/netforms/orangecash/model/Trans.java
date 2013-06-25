@@ -111,6 +111,14 @@ public class Trans {
 		return trans;
 	}
 	
+	public boolean isCharge() {
+		if(this.getTransAmountCard() != null && this.getTransAmountCard().contains("-")){
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
 	public ContentValues getAllContentValues() {
 		ContentValues values = new ContentValues();
 		values.put(Trans.COLUMN_TRANS_ID, getId());

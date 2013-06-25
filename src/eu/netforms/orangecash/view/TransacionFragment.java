@@ -1,6 +1,5 @@
 package eu.netforms.orangecash.view;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import android.os.Bundle;
@@ -9,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import eu.netforms.orangecash.R;
+import eu.netforms.orangecash.data.BalanceDataSource;
 import eu.netforms.orangecash.model.Trans;
 
 public class TransacionFragment extends ListFragment implements PageFragment {
@@ -16,16 +16,13 @@ public class TransacionFragment extends ListFragment implements PageFragment {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		TransactionAdapter transactionAdapter  = new TransactionAdapter(getActivity(), getTrans());
+		TransactionAdapter transactionAdapter = new TransactionAdapter(getActivity(), getTrans());
 		setListAdapter(transactionAdapter);
 	}
 
 	private List<Trans> getTrans() {
-		List<Trans> list = new ArrayList<Trans>();
-	    //list.add(new Trans());
-	    //list.add(new Trans());
-	    //list.add(new Trans());
-	    return list;
+		BalanceDataSource dataSource = new BalanceDataSource(getActivity());
+		return dataSource.getTrans();
 	}
 
 	@Override
