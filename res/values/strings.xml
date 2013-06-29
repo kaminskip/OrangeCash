@@ -9,6 +9,15 @@
     <string name="tab_transactions">Transakcje</string>
     <string name="tab_info">Karta</string>
     
+    <string name="balance_balance">Dostępne środki z dnia</string>
+    
+    <string name="info_feed_in_year">Suma zasileń w roku kalendarzowym</string>
+    <string name="info_card_nr">Nr Karty mBank</string>
+    <string name="info_card_valid_thru">Data ważności</string>
+    <string name="info_card_type">Typ Karty</string>
+    <string name="info_card_status">Status Karty</string>
+    <string name="info_card_info_date">Aktualność danych</string>
+    
     <string name="tab_transactions_no_data">Brak transakcji</string>
     
 </resources>

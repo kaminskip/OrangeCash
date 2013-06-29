@@ -35,15 +35,29 @@ public final class R {
         public static final int shopping_bag=0x7f020002;
     }
     public static final class id {
-        public static final int action_settings=0x7f0b0007;
-        public static final int action_update=0x7f0b0008;
-        public static final int amount=0x7f0b0006;
-        public static final int pager=0x7f0b0000;
-        public static final int transAmount=0x7f0b0005;
-        public static final int transDate=0x7f0b0003;
-        public static final int transDesc=0x7f0b0004;
-        public static final int transImageCharge=0x7f0b0001;
-        public static final int transImageFeed=0x7f0b0002;
+        public static final int action_settings=0x7f0b0015;
+        public static final int action_update=0x7f0b0016;
+        public static final int amount=0x7f0b0014;
+        public static final int balance=0x7f0b0003;
+        public static final int balanceLabel=0x7f0b0001;
+        public static final int cardInfoDate=0x7f0b000f;
+        public static final int cardInfoDateLabel=0x7f0b000e;
+        public static final int cardNr=0x7f0b0007;
+        public static final int cardNrLabel=0x7f0b0006;
+        public static final int cardStatus=0x7f0b000d;
+        public static final int cardStatusLabel=0x7f0b000c;
+        public static final int cardType=0x7f0b000b;
+        public static final int cardTypeLabel=0x7f0b000a;
+        public static final int cardValidThru=0x7f0b0009;
+        public static final int cardValidThruLabel=0x7f0b0008;
+        public static final int feedInYear=0x7f0b0005;
+        public static final int feedInYearLabel=0x7f0b0004;
+        public static final int pager=0x7f0b0010;
+        public static final int transAmount=0x7f0b0013;
+        public static final int transDate=0x7f0b0011;
+        public static final int transDesc=0x7f0b0012;
+        public static final int transImage=0x7f0b0000;
+        public static final int updateDate=0x7f0b0002;
     }
     public static final class layout {
         public static final int balance=0x7f030000;
@@ -59,18 +73,25 @@ public final class R {
         public static final int action_settings=0x7f060001;
         public static final int action_update=0x7f060002;
         public static final int app_name=0x7f060000;
-        public static final int pref_title_cart_number=0x7f060008;
-        public static final int pref_title_cart_number_value=0x7f060009;
-        public static final int pref_title_cvc2=0x7f06000d;
-        public static final int pref_title_cvc2_value=0x7f06000e;
-        public static final int pref_title_valid_thrue=0x7f06000a;
-        public static final int pref_title_valid_thrue_month=0x7f06000b;
-        public static final int pref_title_valid_thrue_year=0x7f06000c;
+        public static final int balance_balance=0x7f060006;
+        public static final int info_card_info_date=0x7f06000c;
+        public static final int info_card_nr=0x7f060008;
+        public static final int info_card_status=0x7f06000b;
+        public static final int info_card_type=0x7f06000a;
+        public static final int info_card_valid_thru=0x7f060009;
+        public static final int info_feed_in_year=0x7f060007;
+        public static final int pref_title_cart_number=0x7f06000f;
+        public static final int pref_title_cart_number_value=0x7f060010;
+        public static final int pref_title_cvc2=0x7f060014;
+        public static final int pref_title_cvc2_value=0x7f060015;
+        public static final int pref_title_valid_thrue=0x7f060011;
+        public static final int pref_title_valid_thrue_month=0x7f060012;
+        public static final int pref_title_valid_thrue_year=0x7f060013;
         public static final int tab_balance=0x7f060003;
         public static final int tab_info=0x7f060005;
         public static final int tab_transactions=0x7f060004;
-        public static final int tab_transactions_no_data=0x7f060006;
-        public static final int title_activity_settings=0x7f060007;
+        public static final int tab_transactions_no_data=0x7f06000d;
+        public static final int title_activity_settings=0x7f06000e;
     }
     public static final class style {
         /** 

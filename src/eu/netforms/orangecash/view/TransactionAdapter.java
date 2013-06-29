@@ -23,7 +23,6 @@ public class TransactionAdapter extends ArrayAdapter<Trans> {
 	private TextView transDescTextView;
 	
 	private ImageView transChargeImageView;
-	private ImageView transFeedImageView;
 
 	public TransactionAdapter(Activity context, List<Trans> list) {
 		super(context, R.layout.transaction_row, list);
@@ -41,30 +40,28 @@ public class TransactionAdapter extends ArrayAdapter<Trans> {
 		transAmountTextView = (TextView) view.findViewById(R.id.transAmount);
 		transDateTextView = (TextView) view.findViewById(R.id.transDate);
 		transDescTextView = (TextView) view.findViewById(R.id.transDesc);
-		
-		transFeedImageView = (ImageView) view.findViewById(R.id.transImageFeed); 
-		transChargeImageView = (ImageView) view.findViewById(R.id.transImageCharge); 
+		 
+		transChargeImageView = (ImageView) view.findViewById(R.id.transImage); 
 		
 		Trans trans = list.get(position);
 		Log.d("TRANS_ADAPTER", "Trans" + trans);
 		
-		if(trans.isCharge()){
-			transFeedImageView.setVisibility(ImageView.INVISIBLE);
-			transChargeImageView.setVisibility(ImageView.VISIBLE);
-			transAmountTextView.setTextColor(context.getResources().getColor(R.color.grey));
-		} else {
-			transFeedImageView.setVisibility(ImageView.VISIBLE);
-			transChargeImageView.setVisibility(ImageView.INVISIBLE);
-			transAmountTextView.setTextColor(context.getResources().getColor(R.color.icon_blue));
-		}
-		
-		transAmountTextView.setText(trans.getTransAmountCard());
 		transDateTextView.setText(trans.getTransDate());
+		transAmountTextView.setText(trans.getTransAmountCard());
+		
 		String desc = trans.getTransDesc();
 		if(trans.getTransPlace() != null && trans.getTransPlace().length()>0){
 			desc = desc + "\n" + trans.getTransPlace();
 		}
 		transDescTextView.setText(desc);
+		
+		if(trans.isCharge()){
+			transChargeImageView.setImageResource(R.drawable.shopping_bag);
+			transAmountTextView.setTextColor(context.getResources().getColor(R.color.grey));
+		} else {
+			transChargeImageView.setImageResource(R.drawable.load_download);
+			transAmountTextView.setTextColor(context.getResources().getColor(R.color.icon_blue));
+		}
 		
 		return view;
 	}
