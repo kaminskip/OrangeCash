@@ -3,7 +3,13 @@
 
     <string name="app_name">OrangeCash</string>
     <string name="action_settings">Ustawienia</string>
+    
     <string name="action_update">Aktualizuj</string>
+    <string name="action_update_done">Dane zostały zaktualizowane</string>
+    <string name="action_update_error">Błąd aktualizacji danych</string>
+    
+    <string name="action_clear">Usuń dane</string>
+    <string name="action_clear_done">Dane zostały usunięte</string>
     
     <string name="tab_balance">Stan konta</string>
     <string name="tab_transactions">Transakcje</string>
@@ -17,6 +23,8 @@
     <string name="info_card_type">Typ Karty</string>
     <string name="info_card_status">Status Karty</string>
     <string name="info_card_info_date">Aktualność danych</string>
+    
+    <string name="no_balance_data">Brak danych</string>
     
     <string name="tab_transactions_no_data">Brak transakcji</string>
     

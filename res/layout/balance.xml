@@ -33,7 +33,6 @@
             android:id="@+id/updateDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="01.01.0001 00:01"
             android:textColor="@color/grey"
             android:textSize="12sp" />
         
@@ -46,7 +45,6 @@
         android:layout_marginTop="5dp"
         android:layout_marginRight="10dp"
         android:gravity="right"
-        android:text="9 999,99 PLN"
         android:textSize="22sp"
         android:textColor="@color/icon_blue"
         android:textStyle="bold" />

@@ -32,8 +32,8 @@ public class Info {
 	private String cardValidThru;
 	private String cardType;
 	private String cardStatus;
-	private Double balance;
-	private Double sum;
+	private String balance;
+	private String sum;
 
 	public Long getId() {
 		return id;
@@ -91,19 +91,19 @@ public class Info {
 		this.cardStatus = cardStatus;
 	}
 
-	public Double getBalance() {
+	public String getBalance() {
 		return balance;
 	}
 
-	public void setBalance(Double balance) {
+	public void setBalance(String balance) {
 		this.balance = balance;
 	}
 
-	public Double getSum() {
+	public String getSum() {
 		return sum;
 	}
 
-	public void setSum(Double sum) {
+	public void setSum(String sum) {
 		this.sum = sum;
 	}
 
@@ -116,8 +116,8 @@ public class Info {
 		info.setCardValidThru(cursor.getString(4));
 		info.setCardType(cursor.getString(5));
 		info.setCardStatus(cursor.getString(6));
-		info.setBalance(cursor.getDouble(7));
-		info.setSum(cursor.getDouble(8));
+		info.setBalance(cursor.getString(7));
+		info.setSum(cursor.getString(8));
 		return info;
 	}
 	

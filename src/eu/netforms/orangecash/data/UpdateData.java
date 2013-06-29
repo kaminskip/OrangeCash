@@ -1,11 +1,12 @@
 package eu.netforms.orangecash.data;
 
-import android.content.Context;
 import android.os.AsyncTask;
 import android.widget.Toast;
+import eu.netforms.orangecash.R;
 import eu.netforms.orangecash.model.AccountData;
+import eu.netforms.orangecash.view.MainActivity;
 
-public class UpdateData extends AsyncTask<String, Void, Boolean> {
+public class UpdateData extends AsyncTask<String, Void, String> {
 	
 	private PropertiesDataSource propertiesDataSource;
 	
@@ -13,9 +14,9 @@ public class UpdateData extends AsyncTask<String, Void, Boolean> {
 	
 	private IBalanceReader balanceReader;
 	
-	private Context context;
+	private MainActivity context;
 
-	public UpdateData(Context context) {
+	public UpdateData(MainActivity context) {
 		super();
 		this.context = context;
 		this.propertiesDataSource = new PropertiesDataSource(this.context);
@@ -24,18 +25,19 @@ public class UpdateData extends AsyncTask<String, Void, Boolean> {
 	}
 
 	@Override
-	protected Boolean doInBackground(String... params) {
+	protected String doInBackground(String... params) {
 		AccountData accountData = this.propertiesDataSource.getAccountData();
 		try {
 			balanceDataSource.updateDB(balanceReader.readBalance(accountData));
-			return true;
+			return context.getResources().getText(R.string.action_update_done).toString();
 		} catch (UpdateEcxeption e) {
-			return false;
+			return context.getResources().getText(R.string.action_update_error).toString();
 		}
 	}
 	
 	@Override
-    protected void onPostExecute(Boolean result) {
+    protected void onPostExecute(String result) {
+		this.context.refresh();
 		Toast.makeText(context, result.toString(), Toast.LENGTH_SHORT).show();
     }
 }

@@ -35,8 +35,8 @@ public class OrangeCashSQLiteOpenHelper extends SQLiteOpenHelper {
 		table.append(Info.COLUMN_INFO_CARD_VALID_THRU + " text, ");
 		table.append(Info.COLUMN_INFO_CARD_TYPE + " text, ");
 		table.append(Info.COLUMN_INFO_CARD_STATUS + " text, ");
-		table.append(Info.COLUMN_INFO_BALANCE + " numeric, ");
-		table.append(Info.COLUMN_INFO_SUM + " numeric");
+		table.append(Info.COLUMN_INFO_BALANCE + " text, ");
+		table.append(Info.COLUMN_INFO_SUM + " text");
 		table.append(");");
 		Log.i(LOG_TAG, table.toString());
 		db.execSQL(table.toString());

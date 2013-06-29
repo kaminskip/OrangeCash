@@ -48,12 +48,16 @@ public class BalanceDataSource {
 	}
 	
 	public Info getInfo() {
-		Info info = null; 
+		open();
+		Info info = null;
 		Cursor cursor = database.query(Info.TABLE_INFO,
 				Info.ALL_COLUMNS, null, null, null, null, null);
 		cursor.moveToFirst();
-		info = Info.cursorToInfo(cursor);
+		if(cursor.getCount()>0){
+			info = Info.cursorToInfo(cursor);
+		}
 		cursor.close();
+		close();
 		return info;
 	}
 	
@@ -66,6 +70,13 @@ public class BalanceDataSource {
 		}
 		close();
 		Log.i(LOG_TAG, "Update complited " + update);
+	}
+	
+	public void clearData() {
+		open();
+		clearDb();
+		close();
+		Log.i(LOG_TAG, "Data cleared ");
 	}
 
 	private Info insertInfo(Info info) {

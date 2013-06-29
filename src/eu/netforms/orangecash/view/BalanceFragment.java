@@ -1,18 +1,35 @@
 package eu.netforms.orangecash.view;
 
-import eu.netforms.orangecash.R;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+import eu.netforms.orangecash.R;
+import eu.netforms.orangecash.data.BalanceDataSource;
+import eu.netforms.orangecash.model.Info;
 
 public class BalanceFragment extends Fragment implements PageFragment {
+	
+	private TextView balanceTextView;
+	private TextView updateDateTextView;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View rootView = inflater.inflate(R.layout.balance, container, false);
+		View rootView = null;
+		BalanceDataSource dataSource = new BalanceDataSource(getActivity());
+		Info info = dataSource.getInfo();
+		if(info != null){
+			rootView = inflater.inflate(R.layout.balance, container, false);
+			balanceTextView = (TextView) rootView.findViewById(R.id.balance);
+			balanceTextView.setText(info.getBalance());
+			updateDateTextView = (TextView) rootView.findViewById(R.id.updateDate);
+			updateDateTextView.setText(info.getInfoDate());
+		} else {
+			rootView = inflater.inflate(R.layout.empty, container, false);
+		}
 		return rootView;
 	}
 	

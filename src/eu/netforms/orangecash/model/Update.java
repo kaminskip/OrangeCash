@@ -33,7 +33,7 @@ public class Update {
 	}
 	
 	public void addInfo(String infoDate, String cardNr, String cardValidThru,
-			String cardType, String cardStatus, Double balance, Double sum){
+			String cardType, String cardStatus, String balance, String sum){
 		this.info.setUpdateDate(this.updateDate);
 		this.info.setInfoDate(infoDate);
 		this.info.setCardNr(cardNr);

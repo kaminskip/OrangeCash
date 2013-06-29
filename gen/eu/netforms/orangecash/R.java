@@ -35,6 +35,7 @@ public final class R {
         public static final int shopping_bag=0x7f020002;
     }
     public static final class id {
+        public static final int action_clear=0x7f0b0017;
         public static final int action_settings=0x7f0b0015;
         public static final int action_update=0x7f0b0016;
         public static final int amount=0x7f0b0014;
@@ -61,37 +62,43 @@ public final class R {
     }
     public static final class layout {
         public static final int balance=0x7f030000;
-        public static final int info=0x7f030001;
-        public static final int main=0x7f030002;
-        public static final int transaction_row=0x7f030003;
-        public static final int transactions=0x7f030004;
+        public static final int empty=0x7f030001;
+        public static final int info=0x7f030002;
+        public static final int main=0x7f030003;
+        public static final int transaction_row=0x7f030004;
+        public static final int transactions=0x7f030005;
     }
     public static final class menu {
         public static final int main=0x7f0a0000;
     }
     public static final class string {
+        public static final int action_clear=0x7f060005;
+        public static final int action_clear_done=0x7f060006;
         public static final int action_settings=0x7f060001;
         public static final int action_update=0x7f060002;
+        public static final int action_update_done=0x7f060003;
+        public static final int action_update_error=0x7f060004;
         public static final int app_name=0x7f060000;
-        public static final int balance_balance=0x7f060006;
-        public static final int info_card_info_date=0x7f06000c;
-        public static final int info_card_nr=0x7f060008;
-        public static final int info_card_status=0x7f06000b;
-        public static final int info_card_type=0x7f06000a;
-        public static final int info_card_valid_thru=0x7f060009;
-        public static final int info_feed_in_year=0x7f060007;
-        public static final int pref_title_cart_number=0x7f06000f;
-        public static final int pref_title_cart_number_value=0x7f060010;
-        public static final int pref_title_cvc2=0x7f060014;
-        public static final int pref_title_cvc2_value=0x7f060015;
-        public static final int pref_title_valid_thrue=0x7f060011;
-        public static final int pref_title_valid_thrue_month=0x7f060012;
-        public static final int pref_title_valid_thrue_year=0x7f060013;
-        public static final int tab_balance=0x7f060003;
-        public static final int tab_info=0x7f060005;
-        public static final int tab_transactions=0x7f060004;
-        public static final int tab_transactions_no_data=0x7f06000d;
-        public static final int title_activity_settings=0x7f06000e;
+        public static final int balance_balance=0x7f06000a;
+        public static final int info_card_info_date=0x7f060010;
+        public static final int info_card_nr=0x7f06000c;
+        public static final int info_card_status=0x7f06000f;
+        public static final int info_card_type=0x7f06000e;
+        public static final int info_card_valid_thru=0x7f06000d;
+        public static final int info_feed_in_year=0x7f06000b;
+        public static final int no_balance_data=0x7f060011;
+        public static final int pref_title_cart_number=0x7f060014;
+        public static final int pref_title_cart_number_value=0x7f060015;
+        public static final int pref_title_cvc2=0x7f060019;
+        public static final int pref_title_cvc2_value=0x7f06001a;
+        public static final int pref_title_valid_thrue=0x7f060016;
+        public static final int pref_title_valid_thrue_month=0x7f060017;
+        public static final int pref_title_valid_thrue_year=0x7f060018;
+        public static final int tab_balance=0x7f060007;
+        public static final int tab_info=0x7f060009;
+        public static final int tab_transactions=0x7f060008;
+        public static final int tab_transactions_no_data=0x7f060012;
+        public static final int title_activity_settings=0x7f060013;
     }
     public static final class style {
         /** 

@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import eu.netforms.orangecash.R;
+import eu.netforms.orangecash.data.ClearData;
 import eu.netforms.orangecash.data.PropertiesDataSource;
 import eu.netforms.orangecash.data.UpdateData;
 
@@ -17,10 +18,9 @@ public class MainActivity extends FragmentActivity implements
 		ActionBar.TabListener {
 
 	PagesAdapter pagesAdapter;
-	
 	ViewPager viewPager;
-	
 	PropertiesDataSource propertiesDataSource;
+	public static final int PLEASE_WAIT_DIALOG = 1;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -53,9 +53,9 @@ public class MainActivity extends FragmentActivity implements
 
 		// For each of the sections in the app, add a tab to the action bar.
 		for (int i = 0; i < pagesAdapter.getCount(); i++) {
-			int codeName = ((PageFragment) pagesAdapter.getItem(i)).getFragmentCodeName();
-			actionBar.addTab(actionBar.newTab()
-					.setText(codeName)
+			int codeName = ((PageFragment) pagesAdapter.getItem(i))
+					.getFragmentCodeName();
+			actionBar.addTab(actionBar.newTab().setText(codeName)
 					.setTabListener(this));
 		}
 	}
@@ -98,19 +98,33 @@ public class MainActivity extends FragmentActivity implements
 							+ item.getTitle() + ")");
 			updateData();
 			break;
+		case R.id.action_clear:
+			Log.v("ACTION",
+					"Select settings " + item.getItemId() + " ("
+							+ item.getTitle() + ")");
+			clearData();
+			break;
 		default:
 			Log.w("ACTION", "No action handled! " + item.getItemId() + " ("
 					+ item.getTitle() + ")");
 		}
 		return super.onOptionsItemSelected(item);
 	}
-	
+
 	private void updateData() {
-		new UpdateData(getApplicationContext()).execute("");
+		new UpdateData(this).execute("");
 	}
 
-	private void goToSettings(){
+	private void clearData() {
+		new ClearData(this).execute("");
+	}
+
+	private void goToSettings() {
 		startActivity(new Intent(this, SettingsActivity.class));
 	}
-
+	
+	public void refresh() {
+		this.finish();
+		startActivity(new Intent(this, this.getClass()));
+	}
 }

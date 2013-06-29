@@ -3,18 +3,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <ListView
-        android:id="@id/android:list"
-        android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_weight="1"
-        android:drawSelectorOnTop="false" />
-
     <TextView
-        android:id="@id/android:empty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/tab_transactions_no_data"
+        android:text="@string/no_balance_data"
         android:layout_marginTop="100dp"
         android:textColor="@color/light_grey"
         android:textSize="12sp"

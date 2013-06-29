@@ -34,7 +34,6 @@
             android:id="@+id/feedInYear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="9 999 999,99 PLN"
             android:textSize="18sp"
             android:textStyle="bold" />
         
@@ -52,7 +51,6 @@
             android:id="@+id/cardNr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="**** **** **** 0000"
             android:textSize="18sp"
             android:textStyle="bold" />
         
@@ -70,7 +68,6 @@
             android:id="@+id/cardValidThru"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="12/99 (MM/RR)"
             android:textSize="18sp"
             android:textStyle="bold" />
         
@@ -88,7 +85,6 @@
             android:id="@+id/cardType"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="MasterCard Prepaid"
             android:textSize="18sp"
             android:textStyle="bold" />
         
@@ -106,7 +102,6 @@
             android:id="@+id/cardStatus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nieaktywna"
             android:textSize="18sp"
             android:textStyle="bold" />
         
@@ -124,7 +119,6 @@
             android:id="@+id/cardInfoDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="01.01.0001 00:01"
             android:textSize="18sp"
             android:textStyle="bold" />
         
