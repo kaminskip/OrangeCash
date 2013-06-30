@@ -9,13 +9,15 @@ import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
 import eu.netforms.orangecash.R;
 import eu.netforms.orangecash.data.ClearData;
 import eu.netforms.orangecash.data.PropertiesDataSource;
 import eu.netforms.orangecash.data.UpdateData;
 
 public class MainActivity extends FragmentActivity implements
-		ActionBar.TabListener {
+		ActionBar.TabListener, OnClickListener {
 
 	PagesAdapter pagesAdapter;
 	ViewPager viewPager;
@@ -122,9 +124,20 @@ public class MainActivity extends FragmentActivity implements
 	private void goToSettings() {
 		startActivity(new Intent(this, SettingsActivity.class));
 	}
-	
+
 	public void refresh() {
 		this.finish();
 		startActivity(new Intent(this, this.getClass()));
+	}
+	
+	@Override
+	public void onClick(View v) {
+		System.out.println("ello");
+		final int id = v.getId();
+		switch (id) {
+		case R.id.updateButton:
+			new UpdateData(this).execute("");
+			break;
+		}
 	}
 }

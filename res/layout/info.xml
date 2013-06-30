@@ -9,8 +9,8 @@
         android:id="@+id/transImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/tab_transactions"
-        android:src="@drawable/shopping_bag" />
+        android:contentDescription="@string/tab_info"
+        android:src="@drawable/cards_icon" />
 
     <LinearLayout
         android:layout_width="wrap_content"

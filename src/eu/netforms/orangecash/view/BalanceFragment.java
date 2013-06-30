@@ -11,28 +11,31 @@ import eu.netforms.orangecash.data.BalanceDataSource;
 import eu.netforms.orangecash.model.Info;
 
 public class BalanceFragment extends Fragment implements PageFragment {
-	
+
 	private TextView balanceTextView;
 	private TextView updateDateTextView;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View rootView = null;
 		BalanceDataSource dataSource = new BalanceDataSource(getActivity());
 		Info info = dataSource.getInfo();
-		if(info != null){
-			rootView = inflater.inflate(R.layout.balance, container, false);
+		if (info != null) {
+			final View rootView = inflater.inflate(R.layout.balance, container,
+					false);
 			balanceTextView = (TextView) rootView.findViewById(R.id.balance);
 			balanceTextView.setText(info.getBalance());
-			updateDateTextView = (TextView) rootView.findViewById(R.id.updateDate);
+			updateDateTextView = (TextView) rootView
+					.findViewById(R.id.updateDate);
 			updateDateTextView.setText(info.getInfoDate());
+			return rootView;
 		} else {
-			rootView = inflater.inflate(R.layout.empty, container, false);
+			final View rootView = inflater.inflate(R.layout.empty, container,
+					false);
+			return rootView;
 		}
-		return rootView;
 	}
-	
+
 	public int getFragmentCodeName() {
 		return R.string.tab_balance;
 	}
