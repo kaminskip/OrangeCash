@@ -1,6 +1,7 @@
 package eu.netforms.orangecash.data;
 
 import android.os.AsyncTask;
+import android.util.Log;
 import android.widget.Toast;
 import eu.netforms.orangecash.R;
 import eu.netforms.orangecash.model.AccountData;
@@ -21,7 +22,8 @@ public class UpdateData extends AsyncTask<String, Void, String> {
 		this.context = context;
 		this.propertiesDataSource = new PropertiesDataSource(this.context);
 		this.balanceDataSource = new BalanceDataSource(this.context);
-		this.balanceReader = new MockBalanceReader();
+		//this.balanceReader = new MockBalanceReader();
+		this.balanceReader = new OrangeBalanceReader();
 	}
 
 	@Override
@@ -29,15 +31,25 @@ public class UpdateData extends AsyncTask<String, Void, String> {
 		AccountData accountData = this.propertiesDataSource.getAccountData();
 		try {
 			balanceDataSource.updateDB(balanceReader.readBalance(accountData));
-			return context.getResources().getText(R.string.action_update_done).toString();
+			return null;
 		} catch (UpdateEcxeption e) {
-			return context.getResources().getText(R.string.action_update_error).toString();
+			Log.e("UPDATE", e.getMessage());
+			StringBuffer errorText = new StringBuffer();
+			errorText.append(context.getResources().getText(R.string.action_update_error).toString());
+			errorText.append(" (");
+			errorText.append(e.getMessage());
+			errorText.append(")");
+			return errorText.toString();
 		}
 	}
 	
 	@Override
     protected void onPostExecute(String result) {
-		this.context.refresh();
-		Toast.makeText(context, result.toString(), Toast.LENGTH_SHORT).show();
+		if(result == null){
+			this.context.refresh();
+			Toast.makeText(context, context.getResources().getText(R.string.action_update_done).toString(), Toast.LENGTH_SHORT).show();
+		} else {
+			Toast.makeText(context, result.toString(), Toast.LENGTH_LONG).show();
+		}
     }
 }
