@@ -29,6 +29,7 @@ public class OrangeBalanceReader implements IBalanceReader {
 	private static final String PARAM_CARD_YEAR = "selectYear";
 	private static final String PARAM_CVC2 = "cvv2";
 	private static final String COOKIE_PARAM = "JSESSIONID";
+	private static final int TIMEOUT = 1000 * 60;//60 seconds
 	
 	private String jsessionid;
 	private String timestamp;
@@ -69,7 +70,7 @@ public class OrangeBalanceReader implements IBalanceReader {
 		String url = IBRE_HOST + IBRE_LOGIN;
 		Document doc;
 		try {
-			Connection.Response res = Jsoup.connect(url).method(Method.GET).execute();
+			Connection.Response res = Jsoup.connect(url).timeout(TIMEOUT).method(Method.GET).execute();
 			jsessionid = res.cookie(COOKIE_PARAM);
 			if(jsessionid == null || jsessionid.length() == 0){
 				throw new UpdateEcxeption(Code.LOGIN_READ_PAGE, "Can not read jsessionid");
@@ -128,7 +129,7 @@ public class OrangeBalanceReader implements IBalanceReader {
 			params.put(PARAM_CARD_MONTH, accountData.getValidThruMonth());
 			params.put(PARAM_CVC2, accountData.getCcv2());
 			params.put(PARAM_TIMESTAMP, timestamp);
-			doc = Jsoup.connect(url).cookie(COOKIE_PARAM, jsessionid).data(params).post();
+			doc = Jsoup.connect(url).timeout(TIMEOUT).cookie(COOKIE_PARAM, jsessionid).data(params).post();
 			Elements error = doc.select("div.loginErrorMsg");
 			if(error.size() == 1){
 				throw new UpdateEcxeption(Code.LOGIN_POST, error.text());

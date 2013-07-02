@@ -2,126 +2,135 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="horizontal"
-    android:minHeight="50dp" >
-
-    <ImageView
-        android:id="@+id/transImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/tab_info"
-        android:src="@drawable/cards_icon" />
+    android:background="@drawable/wallpaper"
+    android:minHeight="50dp"
+    android:orientation="vertical" >
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginBottom="5dp"
-        android:orientation="vertical" >
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.8"
+        android:background="@color/white"
+        android:orientation="horizontal" >
 
-        <TextView
-            android:id="@+id/feedInYearLabel"
+        <ImageView
+            android:id="@+id/transImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/info_feed_in_year"
-            android:textColor="@color/light_grey"
-            android:textSize="12sp"
-            android:textStyle="italic" />
+            android:contentDescription="@string/tab_info"
+            android:src="@drawable/cards_icon" />
 
-        <TextView
-            android:id="@+id/feedInYear"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-        
-        <TextView
-            android:id="@+id/cardNrLabel"
-            android:layout_marginTop="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/info_card_nr"
-            android:textColor="@color/light_grey"
-            android:textSize="12sp"
-            android:textStyle="italic" />
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/cardNr"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-        
-        <TextView
-            android:id="@+id/cardValidThruLabel"
-            android:layout_marginTop="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/info_card_valid_thru"
-            android:textColor="@color/light_grey"
-            android:textSize="12sp"
-            android:textStyle="italic" />
+            <TextView
+                android:id="@+id/feedInYearLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/info_feed_in_year"
+                android:textColor="@color/light_grey"
+                android:textSize="12sp"
+                android:textStyle="italic" />
 
-        <TextView
-            android:id="@+id/cardValidThru"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-        
-        <TextView
-            android:id="@+id/cardTypeLabel"
-            android:layout_marginTop="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/info_card_type"
-            android:textColor="@color/light_grey"
-            android:textSize="12sp"
-            android:textStyle="italic" />
+            <TextView
+                android:id="@+id/feedInYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/cardType"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-        
-        <TextView
-            android:id="@+id/cardStatusLabel"
-            android:layout_marginTop="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/info_card_status"
-            android:textColor="@color/light_grey"
-            android:textSize="12sp"
-            android:textStyle="italic" />
+            <TextView
+                android:id="@+id/cardNrLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/info_card_nr"
+                android:textColor="@color/light_grey"
+                android:textSize="12sp"
+                android:textStyle="italic" />
 
-        <TextView
-            android:id="@+id/cardStatus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-        
-        <TextView
-            android:id="@+id/cardInfoDateLabel"
-            android:layout_marginTop="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/info_card_info_date"
-            android:textColor="@color/light_grey"
-            android:textSize="12sp"
-            android:textStyle="italic" />
+            <TextView
+                android:id="@+id/cardNr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/cardInfoDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-        
+            <TextView
+                android:id="@+id/cardValidThruLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/info_card_valid_thru"
+                android:textColor="@color/light_grey"
+                android:textSize="12sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/cardValidThru"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/cardTypeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/info_card_type"
+                android:textColor="@color/light_grey"
+                android:textSize="12sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/cardType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/cardStatusLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/info_card_status"
+                android:textColor="@color/light_grey"
+                android:textSize="12sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/cardStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/cardInfoDateLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/info_card_info_date"
+                android:textColor="@color/light_grey"
+                android:textSize="12sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/cardInfoDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>

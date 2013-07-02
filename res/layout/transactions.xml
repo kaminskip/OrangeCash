@@ -1,6 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/wallpaper"
     android:orientation="vertical" >
 
     <ListView
@@ -8,6 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dip"
         android:layout_weight="1"
+        android:alpha="0.8"
+        android:background="@color/white"
         android:drawSelectorOnTop="false" />
 
     <TextView

@@ -18,6 +18,7 @@ public final class R {
         public static final int grey=0x7f090002;
         public static final int icon_blue=0x7f090000;
         public static final int light_grey=0x7f090001;
+        public static final int white=0x7f090003;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -36,6 +37,7 @@ public final class R {
         public static final int reload_icon=0x7f020003;
         public static final int shopping_bag=0x7f020004;
         public static final int wallet_icon=0x7f020005;
+        public static final int wallpaper=0x7f020006;
     }
     public static final class id {
         public static final int action_clear=0x7f0b0018;
