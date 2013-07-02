@@ -2,10 +2,9 @@ package eu.netforms.orangecash.model;
 
 import java.util.Date;
 
-import eu.netforms.orangecash.data.DataUtil;
-
 import android.content.ContentValues;
 import android.database.Cursor;
+import eu.netforms.orangecash.data.DataUtil;
 
 public class Trans {
 	

@@ -1,8 +1,8 @@
 package eu.netforms.orangecash.view;
 
-import eu.netforms.orangecash.R;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
+import eu.netforms.orangecash.R;
 
 public class SettingsActivity extends PreferenceActivity {
 

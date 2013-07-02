@@ -1,11 +1,11 @@
 package eu.netforms.orangecash.data;
 
-import eu.netforms.orangecash.model.Info;
-import eu.netforms.orangecash.model.Trans;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+import eu.netforms.orangecash.model.Info;
+import eu.netforms.orangecash.model.Trans;
 
 public class OrangeCashSQLiteOpenHelper extends SQLiteOpenHelper {
 
